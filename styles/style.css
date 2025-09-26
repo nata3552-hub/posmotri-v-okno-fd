@@ -58,7 +58,7 @@ ol {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  padding: 133px 30px;
+  padding: 0px 30px;
   gap: 30px;
   width: 1140px;
 }
@@ -195,10 +195,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
-.content__card-link_current {
-  background-color: #1b1919;
-}
-.content__card-link_current:active {
+.content__card-link:active {
   background-color: #545050;
   text-decoration: none;
 }
