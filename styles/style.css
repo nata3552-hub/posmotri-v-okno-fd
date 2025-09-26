@@ -10,9 +10,8 @@ html {
 
 .page {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -21,6 +20,7 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   line-height: 100%;
+  padding-right: 59px;
 }
 
 h1,
@@ -86,7 +86,6 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 0%;
   margin-bottom: 5px;
 }
 .search-form__label {
@@ -171,7 +170,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   gap: 30px;
   height: 298px;
   overflow-y: auto;
-  overflow-x: hidden;
   position: relative;
 }
 .content__list {
@@ -183,30 +181,31 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .content__list-item {
   padding: 3px;
 }
-.content__list-item:hover {
-  text-decoration: underline;
-}
-.content__list-item:focus {
-  outline: none;
-}
-.content__list-item:focus-visible {
-  outline: 1px solid #fff;
-}
 .content__card-link {
   display: block;
   text-decoration: none;
   color: #fff;
 }
+.content__card-link:hover {
+  text-decoration: underline;
+}
+.content__card-link:focus {
+  outline: none;
+}
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
 .content__card-link_current {
-  background-color: transparent;
+  background-color: #1b1919;
+}
+.content__card-link_current:active {
+  background-color: #545050;
+  text-decoration: none;
 }
 .content__video-card {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-}
-.content__video-card:active {
-  background-color: #545050;
 }
 .content__video-card-description-container {
   flex-grow: 1;
@@ -246,6 +245,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
+  height: 34px;
 }
 .button:hover {
   text-decoration: underline ;
@@ -262,27 +262,19 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
-.more-button {
-  height: 34px;
-}
-.result__video-container,
 .search-form__label,
 .button
  {
   cursor: pointer;
-}
-.preloader {
-  position: absolute;
 }
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   white-space: nowrap;
 }
